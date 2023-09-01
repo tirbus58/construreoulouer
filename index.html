@@ -1,0 +1,199 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootsnav.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<style>
+    
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        
+        body{
+            background-image: url(timo-stern-1423404-unsplash.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    :root{
+    --bg_color: #dfe6e9;
+    --text_color: #555;
+}
+nav.navbar.bootsnav{
+    background-color: var(--bg_color);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 8px;
+    margin-bottom: 150px;
+    border: none;
+}
+nav.navbar.bootsnav ul.nav>li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+    color: var(--text_color);
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all .5s ease;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 8px 30px 8px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+    color: var(--text_color);
+    background: transparent !important;
+    box-shadow: 0 0 5px var(--text_color) inset;
+    border-color: transparent;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a.dropdown-toggle:active,
+nav.navbar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a{
+    color: var(--text_color) !important;
+    background-color: #fff !important;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+    color: var(--text_color);
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+    opacity: 0;
+    visibility: hidden;
+    transform: perspective(600px) rotateY(-30deg) scaleX(0);
+    transform-origin: top center;
+    transition: all 0.5s ease-in-out 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: perspective(600px) rotateY(0deg) scale(1);
+}
+.dropdown-menu.multi-dropdown{
+    position: absolute;
+    left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    background-color: var(--bg_color);
+    border: none;
+    border-radius: 0 0 10px 10px;
+    top: 124%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{ top: 100%; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a{ padding-left: 10px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+    color: var(--text_color);
+    font-size: 16px;
+    font-weight: bold;
+}
+@media only screen and (max-width:990px){
+    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+    nav.navbar.bootsnav .navbar-toggle{
+        color: var(--text_color);
+        background: transparent !important;
+    }
+    nav.navbar.bootsnav ul.nav>li{ margin: 5px auto 15px; }
+    nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background-color: var(--bg_color); }
+    nav.navbar.bootsnav.navbar-mobile ul.nav>li>a{
+        text-align: center;
+        padding: 10px 15px;
+        border: none;
+    }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a{ padding: 10px 10px 10px 17px; }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:before{ color: var(--text_color); }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a{
+        color: var(--text_color);
+        padding-left: 10px;
+        border-bottom-color: none;
+    }
+    nav.navbar.bootsnav ul.nav>li.dropdown>ul{ top: 100%; }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+        font-size: 14px;
+        font-weight: normal;
+        color: var(--text_color);
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu li a{
+       color: var(--text_color);
+   }
+}
+    
+    
+    </style>
+</head>
+
+<body>
+	
+		<nav class="navbar  navbar-expand-lg bg-dark bootsnav fixed-top">
+				<div class="container">
+					
+				   <a class="navbar-brand mr-auto" href="./index.html"><i class="fa fa-bank" style="color:red"></i></a>
+				   <button class="navbar-toggler" type="button" data-toggle="offcanvas">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse  justify-content-center" id="Navbar">
+						<ul class="navbar-nav nav-list mr-auto" data-in="fadeInDown" data-out="fadeOutUp">
+							<li class=" dropdown megamenu-fw ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdowns</a>
+                        <ul class="dropdown-menu megamenu-content" role="menu">
+                            <li><a href="#">Custom Menu</a></li>
+                            <li><a href="#">Custom Menu</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Custom Menu</a></li>
+                            <li><a href="#">Custom Menu</a></li>
+                            <li><a href="#">Custom Menu</a></li>
+                            <li><a href="#">Custom Menu</a></li>
+                        </ul>
+                    </li>
+							<li class="nav-item "><a class="link-warning" href="./empire_entite.html">Vendre</a></li>
+							<li class="nav-item"><a class="link-warning" href="./empire_actualite1.html">Gestion immobiliere</a></li>
+							<li class="nav-item "><a class="link-warning" href="./empire_galerie.html">Constuction</a></li>
+							<li class="nav-item "><a class="link-warning" href="./aboutus.html">Accompagnement</a></li>
+							<li class="nav-item"><a class="link-warning" href="./contactus.html">Blog</a></li>
+							<li class="nav-item"><a class="link-warning" href="./contactus.html">Contact</a></li>					
+						</ul> 
+						
+					</div>
+					
+				</div>
+			</nav>
+		
+	
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+</body>
+</html>
